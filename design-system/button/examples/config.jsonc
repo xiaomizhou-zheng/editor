@@ -1,0 +1,18 @@
+/**
+ * This file is used by the test scaling project to optimise test result caching
+ * Examples that are used by tests affect the outcome of tests so must be included when hashing
+ * They are defined here so the hashing algorithm doesn't need to search test files for example usage each time
+ */
+{
+  "testExamples": [
+    "10-button.tsx",
+    "20-button-group.tsx",
+    "30-appearances.tsx",
+    "99-testing.tsx"
+  ],
+  "exampleDependencies": [
+    "@atlaskit/logo",
+    "@atlaskit/select",
+    "react-router-dom"
+  ]
+}

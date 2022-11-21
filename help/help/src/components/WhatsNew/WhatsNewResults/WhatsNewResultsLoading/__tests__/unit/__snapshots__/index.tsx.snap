@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WhatsNewResultsLoading Should match snapshot 1`] = `
+@keyframes animation-0 {
+  0% {
+    background-position: -300px 0;
+  }
+
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    background-position: -300px 0;
+  }
+
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    background-position: -300px 0;
+  }
+
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    background-position: -300px 0;
+  }
+
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    background-position: -300px 0;
+  }
+
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    background-position: -300px 0;
+  }
+
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.emotion-0 {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  height: 40px;
+  margin-top: 0;
+  width: 152px;
+  border-radius: 2px;
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: animation-0;
+  animation-name: animation-0;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  background-color: var(--ds-background-neutral,#EBECF0);
+  background-image: linear-gradient( to right, var(--ds-background-neutral-subtle,#EBECF0) 10%, var(--ds-background-neutral,#DFE1E6) 20%, var(--ds-background-neutral-subtle,#EBECF0) 30% );
+  background-repeat: no-repeat;
+}
+
+<div
+  class="emotion-0"
+/>
+`;

@@ -1,0 +1,78 @@
+{
+  "name": "@atlaskit/icon-object",
+  "version": "6.2.7",
+  "description": "An object icon is used to represent an Atlassian-specific content type.",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+  "homepage": "https://atlassian.design/components/icon-object/",
+  "author": "Atlassian Pty Ltd",
+  "license": "Apache-2.0",
+  "atlaskit:src": "src/index.tsx",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "sideEffects": false,
+  "atlassian": {
+    "disableProductCI": true,
+    "team": "Design System Team",
+    "releaseModel": "scheduled",
+    "website": {
+      "name": "Icon object",
+      "category": "Components"
+    }
+  },
+  "af:exports": {
+    "./metadata": "./src/entry-points/metadata.tsx",
+    "./glyph": "./glyph",
+    ".": "./src/index.tsx"
+  },
+  "scripts": {
+    "build-glyphs": "ts-node --project ../../../tsconfig.node.json ./build/index.tsx"
+  },
+  "dependencies": {
+    "@atlaskit/icon": "^21.11.0",
+    "@babel/runtime": "^7.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@af/icon-build-process": "^0.3.0",
+    "@af/icon-explorer": "^0.0.11",
+    "@atlaskit/button": "^16.4.0",
+    "@atlaskit/docs": "*",
+    "@atlaskit/modal-dialog": "^12.4.0",
+    "@atlaskit/section-message": "^6.3.0",
+    "@atlaskit/ssr": "*",
+    "@atlaskit/textfield": "^5.3.0",
+    "@atlaskit/theme": "^12.2.0",
+    "@atlaskit/tooltip": "^17.6.0",
+    "@atlaskit/visual-regression": "*",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "@emotion/styled": "^11.0.0",
+    "enzyme": "^3.10.0",
+    "fs-extra": "^4.0.2",
+    "jscodeshift": "^0.13.0",
+    "pkg-dir": "^4.2.0",
+    "react-dom": "^16.8.0"
+  },
+  "keywords": [
+    "atlaskit",
+    "ui"
+  ],
+  "techstack": {
+    "@repo/internal": {
+      "design-system": "v1",
+      "dom-events": "use-bind-event-listener",
+      "theming": "tokens",
+      "styling": [
+        "emotion"
+      ],
+      "deprecation": "no-deprecated-imports"
+    }
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

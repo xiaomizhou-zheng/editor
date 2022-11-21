@@ -1,0 +1,38 @@
+---
+order: 2
+---
+
+## Usage
+
+Section messages communicate important information in a section of a screen. Section messages are persistent, but can disappear when the user takes action or resolves the situation.
+
+Use section messages let a user know when:
+
+- taking a particular action may have potentially destructive consequences
+- they need to take action to keep moving through an experience
+- there are connectivity or authentication issues
+
+## Anatomy
+
+![Section message anatomy](images/section-message-anatomy.png)
+
+1. **Icon and background color:** The icon and background color pairing indicates the message type and comes in the default styles for the message type.
+2. **Title:** Titles should clearly and concisely indicate the purpose of the message.
+3. **Description:** This should describe the issue and any action the user needs to take, if any. The message will grow along with the length of the description but should be as succinct as possible.
+4. **Actions (optional):** One or more links that enable the user to act on the section message content.
+
+## Content guidelines
+
+- Titles should clearly describe the issue or reason for the message.
+- Description text should be clear, concise, empathetic, and informative.
+- Use active verbs to guide the user on any actions they need to take.
+
+## Server
+
+Consult [AUI](https://docs.atlassian.com/aui/latest/docs/messages.html) for implementation details.
+
+## Related
+
+- For messages with information affecting the whole site, see [banners](/components/banner).
+- For messages that appear after an event takes place, see [flags](/components/flag).
+- For smaller contextual messages about a specific part of the UI, see [inline messages](/components/inline-message).

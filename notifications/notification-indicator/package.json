@@ -1,0 +1,48 @@
+{
+  "name": "@atlaskit/notification-indicator",
+  "version": "9.0.3",
+  "description": "A wrapped React component used to display whether user has any new notifications.",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "atlaskit:src": "src/index.ts",
+  "atlassian": {
+    "team": "Work Platform: Incoming Work",
+    "releaseModel": "continuous",
+    "website": {
+      "name": "Notification Indicator"
+    }
+  },
+  "af:exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@atlaskit/analytics-next": "^8.0.0",
+    "@atlaskit/badge": "^15.0.0",
+    "@atlaskit/notification-log-client": "^6.0.0",
+    "@babel/runtime": "^7.0.0"
+  },
+  "techstack": {
+    "@repo/internal": {
+      "theming": "tokens"
+    }
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "devDependencies": {
+    "@atlaskit/docs": "*",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "enzyme": "^3.10.0",
+    "sinon": "^2.2.0",
+    "typescript": "4.5.5"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

@@ -1,0 +1,174 @@
+---
+order: 0
+---
+
+import ButtonDefault from '../../examples/constellation/button-default';
+import ButtonPrimary from '../../examples/constellation/button-primary';
+import ButtonSubtle from '../../examples/constellation/button-subtle';
+import ButtonLink from '../../examples/constellation/button-link';
+import ButtonSubtleLink from '../../examples/constellation/button-subtle-link';
+import ButtonWarning from '../../examples/constellation/button-warning';
+import ButtonDanger from '../../examples/constellation/button-danger';
+import ButtonDisabled from '../../examples/constellation/button-disabled';
+import ButtonSelected from '../../examples/constellation/button-selected';
+import ButtonLoading from '../../examples/constellation/button-loading';
+import ButtonPadding from '../../examples/constellation/button-padding';
+import ButtonFullWidth from '../../examples/constellation/button-full-width';
+import ButtonWithIconBefore from '../../examples/constellation/button-with-icon-before';
+import ButtonWithIconAfter from '../../examples/constellation/button-with-icon-after';
+
+## Default
+
+The default form of a button, used for most cases. They are not impactful enough to represent the primary action in a container.
+
+<Example Component={ButtonDefault} packageName="@atlaskit/button" />
+
+## Variants
+
+### Button (standard button)
+
+The most commonly used button component. This button has different appearances, as well as supported the existing dark mode solution.
+
+It does not support the discouraged theming approach.
+
+```js
+// from named entry point (to ensure minimum code is brought in)
+import Button from '@atlaskit/button/standard-button';   
+
+// from main entry point
+import Button from '@atlaskit/button';
+```
+
+### Loading button
+
+A small wrapper around `Button` that allows you to show an `@atlaskit/spinner` as an overlay on the button when you set an isLoading prop to true.
+
+`LoadingButton` takes care of applying a spinner with the correct size and color based on the button spacing and appearance props.
+
+```js
+// from named entry point (to ensure minimum code is brought in)
+import LoadingButton from '@atlaskit/button/loading-button';   
+
+// from main entry point
+import { LoadingButton } from '@atlaskit/button';
+```
+
+### Custom theme button
+
+Avoid using this component. It exists for those already using custom theming, which is hard to use and has performance issues.
+
+This theming approach will be improved in future.
+
+```js
+// from named entry point (to ensure minimum code is brought in)
+import CustomThemeButton from '@atlaskit/button/custom-theme-button';   
+
+// from main entry point
+import { CustomThemeButton } from '@atlaskit/button';
+```
+
+<!-- WARNING: A pollinator test visits this page and searches for this title to validate the page loaded correctly -->
+<!-- https://pollinator.prod.atl-paas.net/checks/f7425790-6c31-4368-9911-3facd24cb51f -->
+<!-- If this title "Appearance" is removed from the page, please update the pollinator test -->
+
+## Appearance
+
+### Primary
+
+Use a `primary` button to call attention to an action on a [form](/patterns/forms) or to highlight the strongest call to action on a page.
+Primary buttons should only appear once per container (not including the application header or in a [modal dialog](/components/modal-dialog)). Not every screen requires a primary button.
+
+<Example Component={ButtonPrimary} packageName="@atlaskit/button" />
+
+### Subtle
+
+Use a `subtle` button with a `primary` button for secondary actions, such as “Cancel".
+
+<Example Component={ButtonSubtle} packageName="@atlaskit/button" />
+
+### Link
+
+Use a `link` button to navigate to another page. These should open in the same window unless information may be lost (for example, when someone is filling out a form), or when the destination is an external site (for example, a knowledge base article).
+
+<Example Component={ButtonLink} packageName="@atlaskit/button" />
+
+### Subtle link
+
+Similar to a `subtle` button, but behaves like a `link` button. Use a `subtle link` button to avoid overwhelming the page with blue links.
+
+<Example Component={ButtonSubtleLink} packageName="@atlaskit/button" />
+
+### Warning
+
+A `warning` button appears before we request the user to take action, usually in anticipation of a significant change. These are found mostly in confirmation modals.
+
+<Example Component={ButtonWarning} packageName="@atlaskit/button" />
+
+### Danger
+
+The `danger` button appears as a final confirmation for a destructive action such as deleting. These are found mostly in confirmation modals.
+
+<Example Component={ButtonDanger} packageName="@atlaskit/button" />
+
+## States
+
+### Disabled
+
+Set `isDisabled` to disable a button that isn’t usable. Disabled buttons can cause accessibility problems, so avoid using `isDisabled`, especially for form submissions.
+
+<Example Component={ButtonDisabled} packageName="@atlaskit/button" />
+
+### Selected
+
+Set `isSelected` to indicate the button is selected.
+
+<Example Component={ButtonSelected} packageName="@atlaskit/button" />
+
+### Loading
+
+Set `isLoading` to indicate the button is loading. The button text is hidden and a spinner is shown in its place, while maintaining the width that it would have if the text were visible.
+
+<Example Component={ButtonLoading} packageName="@atlaskit/button" />
+
+## Spacing
+
+Buttons can have various spacing. Default spacing is used for most use cases, compact for tables and none for breadcrumbs.
+
+<Example Component={ButtonPadding} packageName="@atlaskit/button" />
+
+## Full width
+
+Buttons can be expanded to full width to fill its parent container.
+
+<Example Component={ButtonFullWidth} packageName="@atlaskit/button" />
+
+## Button with icon
+
+Buttons may include an icon before or after the text.
+
+### Icon before
+
+Display an icon before the text.
+
+<Example Component={ButtonWithIconBefore} packageName="@atlaskit/button" />
+
+### Icon after
+
+Display an icon after the text.
+
+<Example Component={ButtonWithIconAfter} packageName="@atlaskit/button" />
+
+## Routing
+
+Button's `component` prop allows a custom React component or HTML element to render
+in place of a `<button>` or `<a>` element.
+
+This is useful for using Button with the `<Link>` component from popular routing libraries.
+
+```js
+import Link from '@popular/routing-library'
+import Button from '@atlaskit/button';
+
+// Set a custom component
+<PrimaryButton component={Link}>Your Work</PrimaryButton>
+```

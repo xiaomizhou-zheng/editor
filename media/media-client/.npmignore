@@ -1,0 +1,7 @@
+build/
+docs/
+examples-helpers/
+examples/
+src/
+test-helpers/
+tsconfig.json

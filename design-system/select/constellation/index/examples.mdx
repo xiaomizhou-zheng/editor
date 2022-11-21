@@ -1,0 +1,119 @@
+---
+order: 0
+---
+
+import SelectCreatable from '../../examples/constellation/select-creatable';
+import SelectSingle from '../../examples/constellation/select-single';
+import SelectSingleClearable from '../../examples/constellation/select-single-clearable';
+import SelectMulti from '../../examples/constellation/select-multi';
+import SelectRadio from '../../examples/constellation/select-radio';
+import SelectCheckbox from '../../examples/constellation/select-checkbox';
+import SelectPopup from '../../examples/constellation/select-popup';
+import SelectAsync from '../../examples/constellation/select-async';
+import SelectAsyncCreatable from '../../examples/constellation/select-async-creatable';
+import SelectCountry from '../../examples/constellation/select-country';
+import SelectGroupedOptions from '../../examples/constellation/select-grouped-options';
+import SelectPopupModalExample from '../../examples/constellation/select-popup-in-modal';
+import SelectAppearanceDefault from '../../examples/constellation/select-appearance-default';
+import SelectAppearanceSubtle from '../../examples/constellation/select-appearance-subtle';
+import SelectAppearanceNone from '../../examples/constellation/select-appearance-none';
+
+## Single select
+
+Allows the user to select a single item from a dropdown list of options.
+
+<Example Component={SelectSingle} packageName="@atlaskit/select" />
+
+## Single select clearable
+
+Setting `isClearable` to true lets users clear their selection using the Backspace or Delete key.
+
+<Example Component={SelectSingleClearable} packageName="@atlaskit/select" />
+
+### Grouped options
+
+Related options can be grouped together in both a single and multi select.
+
+<Example Component={SelectGroupedOptions} packageName="@atlaskit/select" />
+
+## Multi select
+
+Allows the user to select multiple items from a dropdown list of options.
+
+<Example Component={SelectMulti} packageName="@atlaskit/select" />
+
+## Appearance
+
+### Default
+
+The default select appearance.
+
+<Example Component={SelectAppearanceDefault} packageName="@atlaskit/select" />
+
+### Subtle
+
+A select that's transparent until interaction or error.
+
+<Example Component={SelectAppearanceSubtle} packageName="@atlaskit/select" />
+
+### None
+
+A select that's fully transparent with no indication on interaction or error.
+
+<Example Component={SelectAppearanceNone} packageName="@atlaskit/select" />
+
+## Named exports
+
+To consolidate patterns and improve developer experience,
+select provides some pre-configured components as named exports.
+
+### Popup select
+
+Use `PopupSelect` in scenarios where the trigger needs a custom appearance,
+or must occupy very limited horizontal space.
+
+<Example Component={SelectPopup} packageName="@atlaskit/select" />
+
+### Popup select in modal
+
+When using PopupSelect in a modal, use the offset and preventOverflow [Popper props](https://atlaskit.atlassian.com/packages/design-system/popper) to keep the menu from covering the target in the limited space.
+
+<Example Component={SelectPopupModalExample} packageName="@atlaskit/select" />
+
+### Radio select
+
+Use `RadioSelect` to display the list of options as radio elements.
+
+<Example Component={SelectRadio} packageName="@atlaskit/select" />
+
+### Checkbox select
+
+Use `CheckboxSelect` to display the list of options as checkbox elements.
+Use this when it is imperative to show multiple selected options, but there may not be enough real-estate in the control.
+
+<Example Component={SelectCheckbox} packageName="@atlaskit/select" />
+
+### Country select
+
+Use `CountrySelect` to add a country picker to the dropdown list of options.
+
+<Example Component={SelectCountry} packageName="@atlaskit/select" />
+
+### Async select
+
+Use `AsyncSelect` to load asynchronous data from a remote source either during load or every time the input changes.
+
+<Example Component={SelectAsync} packageName="@atlaskit/select" />
+
+### Creatable select
+
+Use `CreatableSelect` to allow the user to insert an item into the list for selection.
+
+<Example Component={SelectCreatable} packageName="@atlaskit/select" />
+
+### Async creatable
+
+Use `AsyncCreatableSelect` to allow users to create new options asynchronously.
+For example, execute async calls before creating the option.
+
+<Example Component={SelectAsyncCreatable} packageName="@atlaskit/select" />

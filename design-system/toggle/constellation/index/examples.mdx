@@ -1,0 +1,58 @@
+---
+order: 0
+---
+
+import ToggleDefault from '../../examples/constellation/toggle-default';
+import ToggleStateless from '../../examples/constellation/toggle-stateless-default';
+import ToggleLarge from '../../examples/constellation/toggle-large';
+import ToggleDisabled from '../../examples/constellation/toggle-disabled';
+import ToggleTooltip from '../../examples/constellation/toggle-tooltip';
+import ToggleLabeled from '../../examples/constellation/toggle-label';
+
+## Size
+
+### Default
+
+The default form of a toggle.
+For pages with lots of toggles,
+use the default size.
+
+<Example Component={ToggleDefault} packageName="@atlaskit/toggle" />
+
+### Large
+
+To call attention to a specific action,
+use a `large` toggle.
+
+<Example Component={ToggleLarge} packageName="@atlaskit/toggle" />
+
+## Disabled
+
+A toggle is disabled when a selection has already been made outside of the current context that negates the need for the toggle.
+
+<Example Component={ToggleDisabled} packageName="@atlaskit/toggle" />
+
+## Tooltips
+
+To let people know what will happen when they interact with a toggle,
+use a [tooltip](/components/tooltip).
+
+<Example Component={ToggleTooltip} packageName="@atlaskit/toggle" />
+
+## Default
+
+Set the initial checked value by setting `defaultChecked` (this is optional, by default it will be set as false if not provided). After that point the checked value is controlled by the component. Provide an `onChange` handler to be notified of checked value changes.
+
+<Example Component={ToggleDefault} packageName="@atlaskit/toggle" />
+
+## Stateless
+
+In a stateless Toggle, manage the checked state of the input by providing the `isChecked` prop. This requires an `onChange` handler to control the state value that you pass into the `isChecked` prop.
+
+<Example Component={ToggleStateless} packageName="@atlaskit/toggle" />
+
+## Labeled
+
+You should use `label` prop when there isn't visible label that you can pair toggle with.
+
+<Example Component={ToggleLabeled} packageName="@atlaskit/toggle" />

@@ -1,0 +1,24 @@
+import { JsonLd } from 'json-ld-types';
+import { Store } from 'redux';
+import { CardType, MetadataStatus } from './types';
+import { APIError } from './errors';
+
+export interface CardStore {
+  [key: string]: CardState;
+}
+export interface CardState {
+  status: CardType;
+  details?: JsonLd.Response;
+  /** @deprecated Feature removed (EDM-2205) */
+  lastUpdatedAt?: number;
+  error?: APIError;
+  metadataStatus?: MetadataStatus;
+}
+
+export const getUrl = (store: Store<CardStore>, url: string) => {
+  return (
+    store.getState()[url] || {
+      status: 'pending',
+    }
+  );
+};

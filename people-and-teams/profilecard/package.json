@@ -1,0 +1,96 @@
+{
+  "name": "@atlaskit/profilecard",
+  "version": "17.2.5",
+  "description": "A React component to display a card with user information.",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "license": "Apache-2.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "atlaskit:src": "src/index.ts",
+  "atlassian": {
+    "team": "People and Teams Collective",
+    "releaseModel": "continuous",
+    "website": {
+      "name": "Profilecard"
+    }
+  },
+  "af:exports": {
+    "./client": "./src/client/index.ts",
+    "./messages": "./src/messages.ts",
+    "./team": "./src/components/Team/index.ts",
+    "./types": "./src/types.ts",
+    "./user": "./src/components/User/index.ts",
+    "./mocks": "./src/mocks/index.ts",
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "(cd ../../.. && yarn eslint 'packages/people-and-teams/profilecard/**/*.{ts,tsx}')",
+    "test": "(cd ../../.. && yarn test 'packages/people-and-teams/profilecard')",
+    "typecheck": "NODE_OPTIONS=--max-old-space-size=4096 tsc --noEmit --project ./tsconfig.json"
+  },
+  "config": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@atlaskit/analytics-next": "^8.2.0",
+    "@atlaskit/avatar": "^21.1.0",
+    "@atlaskit/avatar-group": "^9.1.0",
+    "@atlaskit/button": "^16.4.0",
+    "@atlaskit/dropdown-menu": "^11.5.0",
+    "@atlaskit/give-kudos": "^0.8.0",
+    "@atlaskit/icon": "^21.11.0",
+    "@atlaskit/lozenge": "^11.3.0",
+    "@atlaskit/menu": "^1.4.0",
+    "@atlaskit/popup": "^1.5.0",
+    "@atlaskit/spinner": "^15.2.0",
+    "@atlaskit/theme": "^12.2.0",
+    "@atlaskit/tokens": "^0.10.0",
+    "@babel/runtime": "^7.0.0",
+    "date-fns": "^2.17.0",
+    "lodash": "^4.17.21",
+    "lru-fast": "^0.2.2",
+    "react-intl-next": "npm:react-intl@^5.18.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "styled-components": "^3.2.6"
+  },
+  "devDependencies": {
+    "@atlaskit/docs": "*",
+    "@atlaskit/dynamic-table": "^14.8.0",
+    "@atlaskit/flag": "^14.7.0",
+    "@atlaskit/inline-edit": "^12.2.0",
+    "@atlaskit/select": "^15.7.0",
+    "@atlaskit/util-data-test": "^17.6.0",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "@testing-library/react": "^12.1.5",
+    "enzyme": "^3.10.0",
+    "es6-promise": "^4.0.5",
+    "fetch-mock": "^8.0.0",
+    "loader-utils": "^1.1.0",
+    "react-router-dom": "^4.2.2",
+    "sinon": "^2.2.0",
+    "typescript": "4.5.5",
+    "uid": "^0.0.2"
+  },
+  "keywords": [
+    "ui",
+    "profilecard"
+  ],
+  "techstack": {
+    "@atlassian/frontend": {
+      "import-structure": "atlassian-conventions"
+    },
+    "@repo/internal": {
+      "theming": "tokens"
+    }
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

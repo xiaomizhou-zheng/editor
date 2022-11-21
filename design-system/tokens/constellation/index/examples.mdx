@@ -1,0 +1,95 @@
+---
+order: 3
+---
+
+import SectionMessage from '@atlaskit/section-message';
+
+import TokensButtonExample from '../../examples/constellation/token-button';
+import TokensModalExample from '../../examples/constellation/token-modal';
+import TokensTagExample from '../../examples/constellation/token-tag';
+import TokensTableExample from '../../examples/constellation/token-table';
+
+import TokenElevationExample from '../../examples/constellation/token-elevation'
+
+import TokenNeutralExample from '../../examples/constellation/token-card-neutral';
+import TokenBrandExample from '../../examples/constellation/token-card-brand';
+import TokenInformationExample from '../../examples/constellation/token-card-information';
+import TokenSuccessExample from '../../examples/constellation/token-card-success';
+import TokenWarningExample from '../../examples/constellation/token-card-warning';
+import TokenDangerExample from '../../examples/constellation/token-card-danger';
+import TokenDiscoveryExample from '../../examples/constellation/token-card-discovery';
+import TokenSelectedExample from '../../examples/constellation/token-card-selected';
+
+<SectionMessage
+  title="This is a preview of our new color and theming system, powered by design tokens"
+  appearance="warning"
+>
+  <p>
+    Expect frequent changes as we iterate over the coming months.
+    For early access and release updates, <a href="https://community.developer.atlassian.com/t/introducing-design-tokens-new-colour-foundations-and-dark-mode/62258">see our developer community announcement</a>.
+    For Atlassian employees, <a href="https://go.atlassian.com/tokens">see details</a>.
+  </p>
+</SectionMessage>
+
+## Component examples
+
+### Button
+
+This primary button uses a background token, text token, and other tokens to create a brand appearance.
+
+Buttons and other components can have multiple possible [interaction states](/foundations/color-new/#interaction-states), which require specific tokens to be applied for each state.
+
+<TokensButtonExample/>
+
+### Modal dialog
+
+Modal dialogs use a surface token and shadow token to illustrate [elevation](/foundations/elevation). The surface token ensures no content shows underneath the modal.
+
+<TokensModalExample/>
+
+### Tag
+
+In the tag example, we can see the use of accent colors. Accent colors are available for text, icons, borders, and backgrounds. Apply accent tokens where [colors](/foundations/color-new/#color-roles) do not have a specific meaning tied to them.
+
+<TokensTagExample/>
+
+### Table
+
+An overflow shadow can be applied on horizontal scrollable tables to indicate there is hidden content that can be scrolled back into view.
+
+<TokensTableExample/>
+
+## Pairing examples
+
+These pairing examples are some ways you can mix and match our tokens. If you decide to use a combination of tokens that’s not listed here, make sure to check the contrast to ensure it passes [WCAG AA guidelines](https://www.w3.org/WAI/WCAG2AA-Conformance).
+
+### Neutral
+<TokenNeutralExample />
+
+### Brand
+<TokenBrandExample/>
+
+### Information
+<TokenInformationExample/>
+
+### Success
+<TokenSuccessExample/>
+
+### Warning
+<TokenWarningExample/>
+
+### Danger
+<TokenDangerExample/>
+
+### Discovery
+<TokenDiscoveryExample/>
+
+### Selected
+<TokenSelectedExample/>
+
+### Elevations
+
+There are four available elevations: default, raised, overlay and sunken.
+Raised and overlay elevations require a combination of a surface color, and a matching shadow.
+
+<TokenElevationExample/>

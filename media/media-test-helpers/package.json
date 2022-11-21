@@ -1,0 +1,71 @@
+{
+  "name": "@atlaskit/media-test-helpers",
+  "version": "30.0.5",
+  "description": "Collection of test helpers used in media component stories and specs",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "license": "Apache-2.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "atlaskit:src": "src/index.tsx",
+  "atlassian": {
+    "team": "Media Experience",
+    "inPublicMirror": true,
+    "releaseModel": "scheduled"
+  },
+  "dependencies": {
+    "@atlaskit/button": "^16.4.0",
+    "@atlaskit/checkbox": "^12.4.0",
+    "@atlaskit/icon": "^21.11.0",
+    "@atlaskit/locale": "^2.1.0",
+    "@atlaskit/media-client": "^18.1.0",
+    "@atlaskit/media-common": "^2.17.0",
+    "@atlaskit/media-core": "^34.0.0",
+    "@atlaskit/media-ui": "^22.1.0",
+    "@atlaskit/popup": "^1.5.0",
+    "@atlaskit/textfield": "^5.3.0",
+    "@atlaskit/tooltip": "^17.6.0",
+    "@atlaskit/ufo": "^0.1.0",
+    "@babel/runtime": "^7.0.0",
+    "@emotion/styled": "^10.0.7",
+    "@testing-library/react": "^12.1.5",
+    "enzyme": "^3.10.0",
+    "exenv": "^1.2.2",
+    "kakapo": "^4.0.6",
+    "mock-socket": "^9.0.3",
+    "react-intl-next": "npm:react-intl@^5.18.1",
+    "rxjs": "^5.5.0",
+    "uuid": "^3.1.0",
+    "xhr-mock": "^2.4.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "react-dom": "^16.8.0",
+    "typescript": "4.5.5"
+  },
+  "af:exports": {
+    "./renderWithIntl": "./src/renderWithIntl.tsx",
+    "./smart-card-state": "./src/smart-card-state.ts",
+    "./fakeMediaClient": "./src/fakeMediaClient.ts",
+    "./media-mock": "./src/mocks/media-mock.ts",
+    "./images": "./src/images.tsx",
+    "./jestHelpers": "./src/jestHelpers.ts",
+    "./collectionNames": "./src/collectionNames.ts",
+    "./exampleMediaItems": "./src/exampleMediaItems.ts",
+    "./exampleMediaFeatureFlags": "./src/example-mediaFeatureFlags.ts",
+    "./globalEventEmitterListeners": "./src/globalEventEmitterListeners.ts",
+    "./mediaPickerAuthProvider": "./src/mediaPickerAuthProvider.ts",
+    "./getAuthFromContextProvider": "./src/getAuthFromContextProvider.ts",
+    "./mockData": "./src/utils/mockData.ts",
+    ".": "./src/index.tsx"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

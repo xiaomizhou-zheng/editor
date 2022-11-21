@@ -1,0 +1,69 @@
+{
+  "name": "@atlaskit/visually-hidden",
+  "version": "1.1.2",
+  "description": "A composable element that hides elements from the screen while keeping them accessible.",
+  "author": "Atlassian Pty Ltd",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "atlassian": {
+    "disableProductCI": true,
+    "team": "Design System Team",
+    "inPublicMirror": true,
+    "releaseModel": "scheduled",
+    "website": {
+      "name": "Visually hidden",
+      "category": "Components"
+    }
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "sideEffects": false,
+  "atlaskit:src": "src/index.tsx",
+  "af:exports": {
+    ".": "./src/index.tsx"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0",
+    "@emotion/react": "^11.7.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@atlaskit/docs": "*",
+    "@atlaskit/ds-lib": "^2.0.1",
+    "@atlaskit/ssr": "*",
+    "@atlaskit/visual-regression": "^0.8.0",
+    "@atlaskit/webdriver-runner": "*",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.0": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.0",
+    "@testing-library/react": "^12.1.5",
+    "react-dom": "^16.8.0",
+    "typescript": "4.5.5",
+    "wait-for-expect": "^1.2.0"
+  },
+  "techstack": {
+    "@atlassian/frontend": {
+      "import-structure": "atlassian-conventions",
+      "circular-dependencies": "file-and-folder-level"
+    },
+    "@repo/internal": {
+      "dom-events": "use-bind-event-listener",
+      "design-system": "v1",
+      "styling": [
+        "static",
+        "emotion"
+      ],
+      "ui-components": "lite-mode",
+      "analytics": "analytics-next",
+      "theming": "tokens",
+      "deprecation": "no-deprecated-imports"
+    }
+  },
+  "homepage": "https://atlaskit.atlassian.com/packages/design-system/visually-hidden",
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0"
+}

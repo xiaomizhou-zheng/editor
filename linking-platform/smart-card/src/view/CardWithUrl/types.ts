@@ -1,0 +1,30 @@
+import { EventHandler, MouseEvent, KeyboardEvent } from 'react';
+import { CardAppearance, CardPlatform, OnResolveCallback } from '../Card/types';
+import { AnalyticsHandler } from '../../utils/types';
+import { FlexibleUiOptions } from '../FlexibleCard/types';
+import { InlinePreloaderStyle, OnErrorCallback } from '../types';
+import { AnalyticsFacade } from '../../state/analytics';
+
+export type CardWithUrlContentProps = {
+  id: string;
+  url: string;
+  appearance: CardAppearance;
+  platform?: CardPlatform;
+  onClick?: EventHandler<MouseEvent | KeyboardEvent>;
+  isSelected?: boolean;
+  isFrameVisible?: boolean;
+  container?: HTMLElement;
+  dispatchAnalytics: AnalyticsHandler;
+  testId?: string;
+  onResolve?: OnResolveCallback;
+  onError?: OnErrorCallback;
+  showActions?: boolean;
+  inheritDimensions?: boolean;
+  embedIframeRef?: React.Ref<HTMLIFrameElement>;
+  inlinePreloaderStyle?: InlinePreloaderStyle;
+  ui?: FlexibleUiOptions;
+  children?: React.ReactNode;
+  showHoverPreview?: boolean;
+  analyticsEvents?: AnalyticsFacade;
+  placeholder?: string;
+};

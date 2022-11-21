@@ -1,0 +1,61 @@
+{
+  "name": "@atlaskit/item",
+  "version": "12.0.8",
+  "description": "A generic item component to be used within other components",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "license": "Apache-2.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "sideEffects": false,
+  "atlaskit:src": "src/index.js",
+  "atlassian": {
+    "disableProductCI": true,
+    "team": "Design System Team",
+    "deprecatedAutoEntryPoints": true,
+    "releaseModel": "scheduled",
+    "website": {
+      "deprecated": "Item is deprecated. Please use @atlaskit/menu instead.",
+      "name": "Item",
+      "category": "Components"
+    }
+  },
+  "dependencies": {
+    "@atlaskit/theme": "^12.2.0",
+    "@babel/runtime": "^7.0.0",
+    "prop-types": "^15.5.10",
+    "react-addons-text-content": "^0.0.4",
+    "uuid": "^3.1.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "styled-components": "^3.2.6"
+  },
+  "devDependencies": {
+    "@atlaskit/avatar": "^21.1.0",
+    "@atlaskit/docs": "*",
+    "@atlaskit/icon": "^21.11.0",
+    "@atlaskit/lozenge": "^11.3.0",
+    "@atlaskit/ssr": "*",
+    "@atlaskit/tooltip": "^17.6.0",
+    "@atlaskit/visual-regression": "*",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "enzyme": "^3.10.0",
+    "polished": "1.9.3",
+    "react-dom": "^16.8.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "recompose": "^0.26.0",
+    "wait-for-expect": "^1.2.0"
+  },
+  "keywords": [
+    "atlaskit",
+    "react",
+    "ui"
+  ],
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

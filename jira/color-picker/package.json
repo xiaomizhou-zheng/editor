@@ -1,0 +1,63 @@
+{
+  "name": "@atlaskit/color-picker",
+  "version": "3.0.2",
+  "description": "Jira Color Picker Component",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "license": "Apache-2.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "atlaskit:src": "src/index.ts",
+  "atlassian": {
+    "team": "Jira Software: Roadmaps",
+    "releaseModel": "continuous",
+    "website": {
+      "name": "Color Picker"
+    }
+  },
+  "dependencies": {
+    "@atlaskit/analytics-next": "^8.2.0",
+    "@atlaskit/icon": "^21.11.0",
+    "@atlaskit/select": "^15.7.0",
+    "@atlaskit/theme": "^12.2.0",
+    "@atlaskit/tokens": "^0.10.0",
+    "@babel/runtime": "^7.0.0",
+    "memoize-one": "^6.0.0",
+    "styled-components": "^3.2.6"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@atlaskit/docs": "*",
+    "@atlaskit/visual-regression": "*",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "ast-types": "^0.13.3",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "jscodeshift": "^0.13.0",
+    "react": "^16.8.0",
+    "typescript": "4.5.5"
+  },
+  "keywords": [
+    "ui",
+    "color",
+    "picker",
+    "palette"
+  ],
+  "af:exports": {
+    "./ColorPaletteMenu": "./src/components/ColorPaletteMenu.tsx",
+    ".": "./src/index.ts"
+  },
+  "techstack": {
+    "@repo/internal": {
+      "theming": "tokens"
+    }
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

@@ -1,0 +1,167 @@
+---
+order: 0
+---
+
+import LogoIcon from '../../examples/constellation/logo-icon';
+import LogoWordmark from '../../examples/constellation/logo-wordmark';
+import LogoSmall from '../../examples/constellation/logo-small';
+import LogoMedium from '../../examples/constellation/logo-medium';
+import LogoLarge from '../../examples/constellation/logo-large';
+import LogoBrand from '../../examples/constellation/logo-brand';
+import LogoInverse from '../../examples/constellation/logo-inverse';
+import LogoNeutral from '../../examples/constellation/logo-neutral';
+import LogoDefault from '../../examples/constellation/logo-default';
+
+import LogoAtlassian from '../../examples/constellation/logo-atlassian';
+import LogoAtlassianStart from '../../examples/constellation/logo-atlassian-start';
+import LogoBitbucket from '../../examples/constellation/logo-bitbucket';
+import LogoCompass from '../../examples/constellation/logo-compass';
+import LogoConfluence from '../../examples/constellation/logo-confluence';
+import LogoHalp from '../../examples/constellation/logo-halp';
+import LogoJira from '../../examples/constellation/logo-jira';
+import LogoJiraServiceManagement from '../../examples/constellation/logo-jira-service-management';
+import LogoJiraSoftware from '../../examples/constellation/logo-jira-software';
+import LogoJiraWorkManagement from '../../examples/constellation/logo-jira-work-management';
+import LogoOpsgenie from '../../examples/constellation/logo-opsgenie';
+import LogoStatuspage from '../../examples/constellation/logo-statuspage';
+import LogoTrello from '../../examples/constellation/logo-trello';
+
+import SectionMessage from '@atlaskit/section-message';
+
+## Types
+
+### Icon
+
+An icon is an image or symbol that represents a brand or product. It generally does not contain the name of the brand or product.
+
+<Example Component={LogoIcon} packageName="@atlaskit/logo" />
+
+### Wordmark
+
+<SectionMessage appearance="warning" title="Deprecation notice — 31 August 2022">
+  We are deprecating wordmark, and it will be removed in a future major release. <a href='https://atlassian.design/components/logo/examples#icon'>Icon</a> or <a href='https://atlassian.design/components/logo/examples#lockup'>Lockup</a> should be used instead.
+</SectionMessage>
+
+The brand or product name only. A wordmark is a brand or product name styled as a logo.
+
+<Example Component={LogoWordmark} packageName="@atlaskit/logo" />
+
+### Lockup
+
+A lockup is the combination of wordmark (the brand or product name) and its icon, generally referred altogether as a logo.
+
+<Example
+  Component={LogoBrand}
+  packageName="@atlaskit/logo"
+/>
+
+## Appearance
+
+By default, the wordmark and icon inherit their colors from the parent element, however, this can lead to incorrect color combinations.
+Moving forward, all usages of `@atlaskit/logo` should use the `appearance` prop to choose between three brand-approved appearances: brand, neutral, and inverse.
+
+### Brand
+
+Brand product logos are used in situations that demand a bold brand presence against a neutral background.
+
+<Example
+  Component={LogoBrand}
+  packageName="@atlaskit/logo"
+  backgroundColor="white"
+/>
+
+### Neutral
+
+Neutral product logos can be used when the hierarchy calls for the logo to recede, but should always be evaluated for adequate contrast.
+
+<Example
+  Component={LogoNeutral}
+  packageName="@atlaskit/logo"
+  backgroundColor="neutral"
+/>
+
+### Inverse
+
+Inverse product logos should be used to contrast against bold backgrounds.
+
+<Example
+  Component={LogoInverse}
+  packageName="@atlaskit/logo"
+  backgroundColor="blue"
+/>
+
+## Size
+
+### Small
+
+The logomark is the only logo that is used in the `small` size (24px). Use the `small` logo in areas with minimal space or that contain many logos in close proximity. For example, the icon component, the marketing footer, or the emoji picker.
+
+<Example Component={LogoSmall} packageName="@atlaskit/logo" />
+
+### Medium
+
+The `medium` size (32px) is the default size and used primarily within product navigation.
+
+<Example Component={LogoMedium} packageName="@atlaskit/logo" />
+
+### Large
+
+The `large` size (56px) is rarely used. It may be used for a hero piece. For example, Statuspage's login.
+
+<Example Component={LogoLarge} packageName="@atlaskit/logo" />
+
+## Product logos
+
+### Atlassian
+
+<Example Component={LogoAtlassian} packageName="@atlaskit/logo" />
+
+### Bitbucket
+
+<Example Component={LogoBitbucket} packageName="@atlaskit/logo" />
+
+### Compass
+
+<Example Component={LogoCompass} packageName="@atlaskit/logo" />
+
+### Confluence
+
+<Example Component={LogoConfluence} packageName="@atlaskit/logo" />
+
+### Halp
+
+<Example Component={LogoHalp} packageName="@atlaskit/logo" />
+
+### Jira
+
+<Example Component={LogoJira} packageName="@atlaskit/logo" />
+
+### Jira Service Management
+
+<Example Component={LogoJiraServiceManagement} packageName="@atlaskit/logo" />
+
+### Jira Software
+
+<Example Component={LogoJiraSoftware} packageName="@atlaskit/logo" />
+
+### Jira Work Management
+
+<Example Component={LogoJiraWorkManagement} packageName="@atlaskit/logo" />
+
+### Opsgenie
+
+<Example Component={LogoOpsgenie} packageName="@atlaskit/logo" />
+
+### Statuspage
+
+<Example Component={LogoStatuspage} packageName="@atlaskit/logo" />
+
+### Trello
+
+<Example Component={LogoTrello} packageName="@atlaskit/logo" />
+
+## Property logos
+
+### Atlassian Start
+
+<Example Component={LogoAtlassianStart} packageName="@atlaskit/logo" />

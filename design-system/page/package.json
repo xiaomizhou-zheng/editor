@@ -1,0 +1,82 @@
+{
+  "name": "@atlaskit/page",
+  "version": "12.2.2",
+  "description": "A component for building page layouts. Also includes the Grid and GridColumn components.",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+  "author": "Atlassian Pty Ltd",
+  "license": "Apache-2.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "sideEffects": false,
+  "atlaskit:src": "src/index.tsx",
+  "atlaskit:designLink": "https://atlassian.design/foundations/grid",
+  "atlassian": {
+    "disableProductCI": true,
+    "team": "Design System Team",
+    "releaseModel": "scheduled",
+    "website": {
+      "name": "Page",
+      "category": "Components"
+    }
+  },
+  "af:exports": {
+    "./types": "./src/types.tsx",
+    ".": "./src/index.tsx",
+    "./Grid": "./src/grid-wrapper.tsx",
+    "./GridColumn": "./src/grid-column.tsx",
+    "./Page": "./src/page.tsx"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0",
+    "@emotion/react": "^11.7.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@atlaskit/banner": "^12.0.0",
+    "@atlaskit/button": "^16.4.0",
+    "@atlaskit/code": "^14.4.0",
+    "@atlaskit/docs": "*",
+    "@atlaskit/ds-lib": "^2.0.1",
+    "@atlaskit/logo": "^13.10.0",
+    "@atlaskit/navigation": "^37.0.0",
+    "@atlaskit/ssr": "*",
+    "@atlaskit/toggle": "^12.5.0",
+    "@atlaskit/visual-regression": "*",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "@testing-library/react": "^12.1.5",
+    "react-dom": "^16.8.0",
+    "react-lorem-component": "^0.13.0",
+    "typescript": "4.5.5",
+    "wait-for-expect": "^1.2.0"
+  },
+  "keywords": [
+    "atlaskit",
+    "react",
+    "ui"
+  ],
+  "techstack": {
+    "@atlassian/frontend": {
+      "import-structure": "atlassian-conventions"
+    },
+    "@repo/internal": {
+      "dom-events": "use-bind-event-listener",
+      "theming": "tokens",
+      "analytics": "analytics-next",
+      "styling": [
+        "static",
+        "emotion"
+      ],
+      "deprecation": "no-deprecated-imports",
+      "design-system": "v1"
+    }
+  },
+  "homepage": "https://atlaskit.atlassian.com/packages/design-system/page",
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

@@ -1,0 +1,77 @@
+{
+  "name": "@atlaskit/legacy-mobile-macros",
+  "version": "2.1.22",
+  "description": "Higher-order components that optionally add Confluence-specific functionality to editor-mobile-bridge",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "sideEffects": false,
+  "atlaskit:src": "src/index.ts",
+  "atlassian": {
+    "team": "Confluence Content Experience Mobile",
+    "inPublicMirror": false,
+    "releaseModel": "scheduled"
+  },
+  "dependencies": {
+    "@atlaskit/adf-schema": "^24.0.0",
+    "@atlaskit/adf-utils": "^17.1.0",
+    "@atlaskit/analytics-gas-types": "^5.0.5",
+    "@atlaskit/analytics-next": "^8.3.0",
+    "@atlaskit/button": "^16.4.0",
+    "@atlaskit/editor-common": "70.2.0",
+    "@atlaskit/icon": "^21.11.0",
+    "@atlaskit/logo": "^13.10.0",
+    "@atlaskit/spinner": "^15.2.0",
+    "@atlaskit/theme": "12.2.2",
+    "@babel/runtime": "^7.0.0",
+    "react-intl-next": "npm:react-intl@^5.18.1",
+    "styled-components": "^3.2.6",
+    "tslib": "^2.4.0",
+    "use-memo-one": "^1.1.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@atlaskit/docs": "*",
+    "@atlaskit/ssr": "*",
+    "@atlaskit/visual-regression": "*",
+    "@atlaskit/webdriver-runner": "*",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "@testing-library/react": "^12.1.5",
+    "react-dom": "^16.8.0",
+    "react-test-renderer": "^16.8.0",
+    "wait-for-expect": "^1.2.0"
+  },
+  "techstack": {
+    "@atlassian/frontend": {
+      "code-structure": [
+        "tangerine-next"
+      ],
+      "import-structure": [
+        "atlassian-conventions"
+      ],
+      "circular-dependencies": [
+        "file-and-folder-level"
+      ]
+    },
+    "@repo/internal": {
+      "analytics": [
+        "analytics-next"
+      ],
+      "theming": [
+        "react-context"
+      ],
+      "ui-components": [
+        "lite-mode"
+      ],
+      "deprecation": [
+        "no-deprecated-imports"
+      ]
+    }
+  },
+  "af:exports": {},
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

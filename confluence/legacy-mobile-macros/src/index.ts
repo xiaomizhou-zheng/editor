@@ -1,0 +1,1 @@
+export { getConfluenceMobileMacroManifests } from './ui';

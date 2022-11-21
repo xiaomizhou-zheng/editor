@@ -1,0 +1,93 @@
+---
+order: 0
+---
+
+import InlineMessageDefault from '../../examples/constellation/inline-message-default';
+import InlineMessageTitle from '../../examples/constellation/inline-message-title';
+import InlineMessageSecondaryText from '../../examples/constellation/inline-message-secondary-text';
+import InlineMessageInfo from '../../examples/constellation/inline-message-info';
+import InlineMessagePlacement from '../../examples/constellation/inline-message-placement';
+import InlineMessageWarning from '../../examples/constellation/inline-message-warning';
+import InlineMessageError from '../../examples/constellation/inline-message-error';
+import InlineMessageConfirmation from '../../examples/constellation/inline-message-confirmation';
+import InlineMessageConnectivity from '../../examples/constellation/inline-message-connectivity';
+
+## Default
+
+By default, inline messages contain an icon. A `title` and `secondaryText` can be added depending on the use case.
+
+<Example
+  Component={InlineMessageDefault}
+  packageName="@atlaskit/inline-message"
+/>
+
+## Title
+
+Text to display first, bolded for emphasis.
+
+<Example
+  Component={InlineMessageTitle}
+  packageName="@atlaskit/inline-message"
+/>
+
+## Secondary text
+
+Text to display second.
+
+<Example
+  Component={InlineMessageSecondaryText}
+  packageName="@atlaskit/inline-message"
+/>
+
+## Placement
+
+By default, the inline dialog is placed at the bottom at the beginning of the text. This `placement` can be specified, for example, to the right of the text.
+
+<Example
+  Component={InlineMessagePlacement}
+  packageName="@atlaskit/inline-message"
+/>
+
+## Appearance
+
+### Warning
+
+Warning messages appear before we request the user to take action. This is usually in anticipation of a significant change. Warnings should also be used for authentication issues.
+
+<Example
+  Component={InlineMessageWarning}
+  packageName="@atlaskit/inline-message"
+/>
+
+### Error
+
+Error messages let the user know that something has gone wrong after they've tried to do something. They also advise the user of connectivity issues.
+
+<Example
+  Component={InlineMessageError}
+  packageName="@atlaskit/inline-message"
+/>
+
+### Confirmation
+
+Confirmation messages let the user know that they have completed an action.
+
+<Example
+  Component={InlineMessageConfirmation}
+  packageName="@atlaskit/inline-message"
+/>
+
+### Info
+
+Info messages alert the user to additional information without requiring an action.
+
+<Example Component={InlineMessageInfo} packageName="@atlaskit/inline-message" />
+
+### Connectivity
+
+Connectivity messages let the user know that they will need to log in to get more information. Only to be used when warning and error are not appropriate.
+
+<Example
+  Component={InlineMessageConnectivity}
+  packageName="@atlaskit/inline-message"
+/>

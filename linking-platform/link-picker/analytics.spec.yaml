@@ -1,0 +1,157 @@
+common:
+  source: linkPicker
+  product: media
+
+context:
+  PackageMetaData: &PackageMetaDataContext
+    packageName:
+      type: ['@atlaskit/link-picker']
+      description: name of the package the event was fired from
+    packageVersion:
+      type: string
+      description: version of the package the event was fired from
+    source:
+      type: ['linkPicker']
+      description: the name of the ui source the event originated from (linkPicker)
+    componentName:
+      type: ['linkPicker']
+      description: the name of the component the event originated from (linkPicker)
+
+  LinkPickerAnalyticsContext: &LinkPickerAnalyticsContext
+    linkState:
+      type: ['editLink', 'newLink']
+      description: |
+        Whether the link picker is inserting a new link or editing an existing link.
+
+    linkFieldContent:
+      type: ['url', 'text_string']
+      required: false
+      description: |
+        The type of text that has been entered into the link input field (mainly URL vs other text strings that trigger a Search).
+        NULL if there is no text in the link input field.
+
+    linkFieldContentInputMethod:
+      type: ['manual', 'paste', 'searchResult']
+      required: false
+      description: |
+        How the user input the text entered into the link input field.
+        NULL if there is no text in link input field.
+
+    linkFieldContentInputSource:
+      type: string
+      required: false
+      description: |
+        What data source did the inputted URL come from?
+        Mainly useful for Search, so we know where the Search result came from.
+        NULL if the user defined via manual typing or paste.
+        unknown if the user selected the item for a search result, but the data source is not known.
+
+    displayTextFieldContent:
+      type: ['text_string']
+      required: false
+      description: |
+        The type of text that has been entered into the display text input field (mainly URL vs other text strings that trigger a Search).
+        NULL if there is no text in the display text input field.
+
+    displayTextFieldContentInputMethod:
+      type: ['manual', 'paste']
+      required: false
+      description: |
+        How the user input the text entered into the display text input field.
+        NULL if there is no text in display text input field.
+
+    tab:
+      type: string
+      required: false
+      description: |
+        The tab that the user is on when they perform their UI action in the Link Picker
+        NULL is default
+
+events:
+  - form submitted (linkPicker):
+      type: ui
+      description: fired when the link picker is successfully submitted
+      attributes:
+        <<: *PackageMetaDataContext
+        <<: *LinkPickerAnalyticsContext
+
+  - inlineDialog viewed (linkPicker):
+      type: ui
+      description: fired when the link picker component is mounted/viewed
+      attributes:
+        <<: *PackageMetaDataContext
+        <<: *LinkPickerAnalyticsContext
+
+  - inlineDialog closed (linkPicker):
+      type: ui
+      description: fired when the link picked component is unmounted/dismissed for any reason
+      attributes:
+        <<: *PackageMetaDataContext
+        <<: *LinkPickerAnalyticsContext
+
+  - textField updated (linkField):
+      type: ui
+      description: fired when the user's focus moves away from the link input field after modifying its value
+      attributes:
+        <<: *PackageMetaDataContext
+        <<: *LinkPickerAnalyticsContext
+
+  - textField updated (displayTextField):
+      type: ui
+      description: fired when the user's focus moves away from the display text input field after modifying its value
+      attributes:
+        <<: *PackageMetaDataContext
+        <<: *LinkPickerAnalyticsContext
+
+  - tab viewed:
+      type: ui
+      description: fired when the user views a tab
+      attributes:
+        <<: *PackageMetaDataContext
+        <<: *LinkPickerAnalyticsContext
+
+  - linkPicker unhandledErrorCaught:
+      type: ui
+      description: fired when the link picked root error boundary catches an error
+      attributes:
+        <<: *PackageMetaDataContext
+        browserInfo:
+          type: string
+          description: the window navigator userAgent if it exists, else unknown
+        error:
+          type: string
+          description: the error that was caught by the error boundary
+        componentStack:
+          type: string
+          description: componentStack from componentDidCatch info
+          required: false
+
+  - searchResults shown (preQuerySearchResults):
+      type: ui
+      description: Fires when a user opens the Link Picker and the initial set of search results is shown. (Maximum rate 1 event/400ms)
+      attributes:
+        <<: *PackageMetaDataContext
+        <<: *LinkPickerAnalyticsContext
+        resultCount:
+          type: number
+          description: the number of results shown to the user
+
+  - searchResults shown (postQuerySearchResults):
+      type: ui
+      description: Fires when a user triggers a Search of objects within the Link Picker and results are shown. (Maximum rate 1 event/400ms)
+      attributes:
+        <<: *PackageMetaDataContext
+        <<: *LinkPickerAnalyticsContext
+        resultCount:
+          type: number
+          description: the number of results shown to the user
+
+  - resultsResolve failed:
+      type: operational
+      description: fired when a link picker plugin throws an error when attempting to resolve results
+      attributes:
+        <<: *PackageMetaDataContext
+        <<: *LinkPickerAnalyticsContext
+        error:
+          type: string
+          description: a stringified version of the error

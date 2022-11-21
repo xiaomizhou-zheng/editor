@@ -1,0 +1,69 @@
+{
+  "name": "@atlaskit/eslint-plugin-design-system",
+  "description": "The essential plugin for use with the Atlassian Design System.",
+  "version": "4.13.3",
+  "author": "Atlassian Pty Ltd",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "atlassian": {
+    "disableProductCI": true,
+    "team": "Design System Team",
+    "releaseModel": "scheduled",
+    "website": {
+      "name": "ESLint plugin",
+      "category": "Tooling"
+    }
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "typesVersions": {
+    ">=4.0 <4.5": {
+      "*": [
+        "dist/types-ts4.0/*"
+      ]
+    }
+  },
+  "sideEffects": false,
+  "atlaskit:src": "src/index.tsx",
+  "af:exports": {
+    ".": "./src/index.tsx"
+  },
+  "dependencies": {
+    "@atlaskit/tokens": "^0.10.0",
+    "@babel/runtime": "^7.0.0",
+    "eslint-codemod-utils": "^1.4.0"
+  },
+  "devDependencies": {
+    "@atlaskit/ds-lib": "^2.1.0",
+    "@atlaskit/theme": "^12.2.0",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "@emotion/core": "^10.0.9",
+    "@emotion/styled": "^11.0.0",
+    "eslint": "^7.7.0",
+    "react": "^16.8.0",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "4.5.5"
+  },
+  "techstack": {
+    "@atlassian/frontend": {
+      "import-structure": "atlassian-conventions",
+      "circular-dependencies": "file-and-folder-level"
+    },
+    "@repo/internal": {
+      "dom-events": "use-bind-event-listener",
+      "design-system": "v1",
+      "deprecation": "no-deprecated-imports",
+      "styling": [
+        "static",
+        "emotion"
+      ]
+    }
+  },
+  "homepage": "https://atlassian.design/components/eslint-plugin-design-system",
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

@@ -1,0 +1,88 @@
+{
+  "name": "@atlaskit/user-picker",
+  "version": "9.6.0",
+  "description": "Fabric component for display a dropdown to select a user from",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "license": "Apache-2.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "sideEffects": false,
+  "atlaskit:src": "src/index.ts",
+  "atlassian": {
+    "team": "Search & Smarts: Smart Experience",
+    "deprecatedAutoEntryPoints": true,
+    "releaseModel": "continuous",
+    "website": {
+      "name": "User Picker"
+    }
+  },
+  "config": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@atlaskit/analytics-next": "^8.2.0",
+    "@atlaskit/avatar": "^21.1.0",
+    "@atlaskit/icon": "^21.11.0",
+    "@atlaskit/logo": "^13.10.0",
+    "@atlaskit/lozenge": "^11.3.0",
+    "@atlaskit/popper": "^5.0.0",
+    "@atlaskit/select": "^15.7.0",
+    "@atlaskit/spinner": "^15.2.0",
+    "@atlaskit/theme": "^12.2.0",
+    "@atlaskit/tokens": "^0.10.19",
+    "@atlaskit/tooltip": "^17.6.0",
+    "@atlaskit/ufo": "^0.1.0",
+    "@babel/runtime": "^7.0.0",
+    "@emotion/core": "^10.0.9",
+    "lodash": "^4.17.21",
+    "memoize-one": "^6.0.0",
+    "uuid": "^3.1.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-intl-next": "npm:react-intl@^5.18.1"
+  },
+  "devDependencies": {
+    "@atlaskit/analytics-viewer": "^0.4.0",
+    "@atlaskit/button": "^16.4.0",
+    "@atlaskit/docs": "*",
+    "@atlaskit/elements-test-helpers": "^0.7.0",
+    "@atlaskit/modal-dialog": "^12.4.0",
+    "@atlaskit/radio": "^5.4.0",
+    "@atlaskit/range": "^7.0.0",
+    "@atlaskit/section-message": "^6.3.0",
+    "@atlaskit/textfield": "^5.3.0",
+    "@atlaskit/util-data-test": "^17.6.0",
+    "@atlaskit/visual-regression": "*",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "@emotion/styled": "^10.0.7",
+    "@testing-library/dom": "^8.17.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^12.1.5",
+    "@testing-library/react-hooks": "^8.0.1",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/uuid": "^3.4.4",
+    "enzyme": "^3.10.0",
+    "enzyme-react-intl": "^2.0.6",
+    "mock-apollo-client": "^0.1.0",
+    "react-intl-next": "npm:react-intl@^5.18.1",
+    "typescript": "4.5.5"
+  },
+  "techstack": {
+    "@repo/internal": {
+      "theming": "tokens"
+    }
+  },
+  "keywords": [
+    "fabric",
+    "ui"
+  ],
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

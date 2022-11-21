@@ -1,0 +1,67 @@
+{
+  "name": "@atlaskit/focused-task-close-account",
+  "version": "1.1.3",
+  "description": "This package contains all of the UI components needed to assemble the focused tasks for deactivating and deleting users' accounts in accordance with the GDPR \"Right to be forgotten\".",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "license": "Apache-2.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "atlaskit:src": "src/index.ts",
+  "af:exports": {
+    ".": "./src/index.ts"
+  },
+  "atlassian": {
+    "team": "People and Teams Collective",
+    "releaseModel": "scheduled",
+    "website": {
+      "name": "Focused Task Close Account"
+    }
+  },
+  "dependencies": {
+    "@atlaskit/avatar": "^21.1.0",
+    "@atlaskit/button": "^16.4.0",
+    "@atlaskit/drawer": "^7.4.0",
+    "@atlaskit/icon": "^21.11.0",
+    "@atlaskit/inline-dialog": "^13.4.0",
+    "@atlaskit/section-message": "^6.3.0",
+    "@atlaskit/theme": "^12.2.0",
+    "@atlaskit/tokens": "^0.10.0",
+    "@babel/runtime": "^7.0.0",
+    "react-intl-next": "npm:react-intl@^5.18.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-transition-group": "^4.4.1",
+    "styled-components": "^3.2.6"
+  },
+  "devDependencies": {
+    "@atlaskit/checkbox": "^12.4.0",
+    "@atlaskit/docs": "*",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "enzyme": "^3.10.0",
+    "typescript": "4.5.5"
+  },
+  "keywords": [
+    "ui",
+    "gdpr",
+    "right",
+    "erasure",
+    "forgotten",
+    "focusedTaskCloseAccount",
+    "deleteUserDrawer",
+    "deactivateUserDrawer"
+  ],
+  "techstack": {
+    "@repo/internal": {
+      "theming": "tokens"
+    }
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

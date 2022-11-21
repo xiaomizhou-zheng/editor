@@ -1,0 +1,53 @@
+{
+  "name": "@atlaskit/editor-slack-transformer",
+  "version": "3.1.5",
+  "description": "Editor Slack transformer",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "license": "Apache-2.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "sideEffects": false,
+  "atlaskit:src": "src/index.ts",
+  "atlassian": {
+    "team": "Editor Services",
+    "inPublicMirror": true,
+    "releaseModel": "continuous",
+    "website": {
+      "name": "Editor Slack Transformer"
+    }
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0",
+    "prosemirror-markdown": "^1.4.2",
+    "prosemirror-model": "1.14.3"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@atlaskit/activity": "^1.0.1",
+    "@atlaskit/adf-schema": "^24.0.0",
+    "@atlaskit/docs": "*",
+    "@atlaskit/editor-common": "^70.2.0",
+    "@atlaskit/editor-core": "^175.0.0",
+    "@atlaskit/editor-test-helpers": "^17.2.0",
+    "@atlaskit/emoji": "^66.0.0",
+    "@atlaskit/smart-card": "^23.3.0",
+    "@atlaskit/theme": "^12.2.0",
+    "@atlaskit/util-data-test": "^17.6.0",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "@emotion/react": "^11.7.1",
+    "prosemirror-view": "1.23.2",
+    "typescript": "4.5.5"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1",
+  "af:exports": {
+    ".": "./src/index.ts"
+  }
+}

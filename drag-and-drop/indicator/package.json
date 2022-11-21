@@ -1,0 +1,75 @@
+{
+  "name": "@atlaskit/drag-and-drop-indicator",
+  "version": "0.6.1",
+  "description": "A react addon for @atlaskit/drag-and-drop which will draw drop indicators (eg lines)",
+  "atlassian": {
+    "team": "Design System Team",
+    "inPublicMirror": true,
+    "releaseModel": "continuous",
+    "website": {
+      "name": "Drop indicator",
+      "category": "Libraries",
+      "draft": true
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend-mirror",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "sideEffects": false,
+  "atlaskit:src": "src/index.ts",
+  "af:exports": {
+    ".": "./src/index.ts",
+    "./box": "./src/box.tsx",
+    "./experimental/tree": "./src/experimental/tree-drop-indicator.tsx"
+  },
+  "dependencies": {
+    "@atlaskit/drag-and-drop": "^0.8.0",
+    "@atlaskit/drag-and-drop-hitbox": "^0.3.0",
+    "@atlaskit/tokens": "^0.10.11",
+    "@babel/runtime": "^7.0.0",
+    "@emotion/react": "^11.7.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@atlaskit/docs": "*",
+    "@atlaskit/ssr": "*",
+    "@atlaskit/visual-regression": "*",
+    "@atlaskit/webdriver-runner": "*",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.0": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.0",
+    "@testing-library/react": "^12.1.5",
+    "react-dom": "^16.8.0",
+    "tiny-invariant": "^1.2.0",
+    "typescript": "4.5.5",
+    "wait-for-expect": "^1.2.0"
+  },
+  "techstack": {
+    "@atlassian/frontend": {
+      "import-structure": [
+        "atlassian-conventions"
+      ],
+      "circular-dependencies": [
+        "file-and-folder-level"
+      ]
+    },
+    "@repo/internal": {
+      "dom-events": "use-bind-event-listener",
+      "ui-components": "lite-mode",
+      "analytics": "analytics-next",
+      "theming": "tokens",
+      "deprecation": "no-deprecated-imports",
+      "styling": [
+        "emotion",
+        "static"
+      ]
+    }
+  },
+  "homepage": "https://atlassian.design/components/drag-and-drop/",
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.0"
+}

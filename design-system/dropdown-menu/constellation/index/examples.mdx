@@ -1,0 +1,123 @@
+---
+order: 0
+---
+
+import DropdownMenuDefault from '../../examples/constellation/dropdown-menu-default';
+import DropdownMenuTall from '../../examples/constellation/dropdown-menu-tall';
+import DropdownMenuCustomTrigger from '../../examples/constellation/dropdown-menu-custom-trigger';
+import DropdownMenuCustomTriggerButton from '../../examples/constellation/dropdown-menu-custom-trigger-button';
+import DropdownMenuDefaultOpen from '../../examples/constellation/dropdown-menu-default-open';
+import DropdownMenuLoading from '../../examples/constellation/dropdown-menu-loading';
+import DropdownMenuOpen from '../../examples/constellation/dropdown-menu-open';
+import DropdownMenuPlacementDefault from '../../examples/constellation/dropdown-menu-placement-default';
+import DropdownMenuPlacement from '../../examples/constellation/dropdown-menu-placement';
+import DropdownMenuShouldFlip from '../../examples/constellation/dropdown-menu-should-flip';
+import DropdownMenuZIndex from '../../examples/constellation/dropdown-menu-z-index';
+
+## Appearance
+
+### Default
+
+Use `default` for the default dropdown menu appearance. The default menu will scroll after its height exceeds the pre-defined amount.
+
+<Example
+  Component={DropdownMenuDefault}
+  packageName="@atlaskit/dropdown-menu"
+/>
+
+### Tall
+
+Use `tall` to control the height of the menu. The tall menu will not scroll until the height exceeds the height of the viewport.
+
+<Example Component={DropdownMenuTall} packageName="@atlaskit/dropdown-menu" />
+
+## Custom triggers
+
+There are two recommended ways to customize a trigger.
+
+### Using trigger
+
+Set `trigger` to a custom react component which accepts the provided props.
+
+<Example
+  Component={DropdownMenuCustomTriggerButton}
+  packageName="@atlaskit/dropdown-menu"
+/>
+
+Use the `trigger` prop and pass in an html element.
+
+<Example
+  Component={DropdownMenuCustomTrigger}
+  packageName="@atlaskit/dropdown-menu"
+/>
+
+Use the `trigger` prop and pass in a string.
+
+<Example
+  Component={DropdownMenuDefault}
+  packageName="@atlaskit/dropdown-menu"
+/>
+
+## Open by default
+
+Use `defaultOpen` to make the menu open by default.
+
+<Example
+  Component={DropdownMenuDefaultOpen}
+  packageName="@atlaskit/dropdown-menu"
+/>
+
+## States
+
+### Loading
+
+If `isLoading` is true, a spinner is rendered instead of the dropdown items.
+
+<Example
+  Component={DropdownMenuLoading}
+  packageName="@atlaskit/dropdown-menu"
+/>
+
+### Open
+
+Use `isOpen` to control the open state of the dropdown menu.
+
+<Example Component={DropdownMenuOpen} packageName="@atlaskit/dropdown-menu" />
+
+## Positioning
+
+### Default placement
+
+By default the dropdown menu will be placed next to your trigger.
+
+<Example
+  Component={DropdownMenuPlacementDefault}
+  packageName="@atlaskit/dropdown-menu"
+/>
+
+### Placement
+
+Use `placement` to set the menu placement, for example bottom right.
+
+<Example
+  Component={DropdownMenuPlacement}
+  packageName="@atlaskit/dropdown-menu"
+/>
+
+### Should flip
+
+Use `shouldFlip` to place to the dropdown menu on the opposite side of its trigger if it doesn’t fit in the viewport.
+
+<Example
+  Component={DropdownMenuShouldFlip}
+  packageName="@atlaskit/dropdown-menu"
+/>
+
+### Z-index
+
+Use `zIndex` to resolve clashes with other layered components with competing z-index values, such as Popup.
+
+<Example
+  Component={DropdownMenuZIndex}
+  packageName="@atlaskit/dropdown-menu"
+/>

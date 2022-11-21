@@ -1,0 +1,46 @@
+{
+  "name": "@atlaskit/editor-markdown-transformer",
+  "version": "4.2.16",
+  "description": "Editor Markdown transformer",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://bitbucket.org/atlassian/atlassian-frontend",
+  "author": "Atlassian Pty Ltd",
+  "license": "MIT",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "module:es2019": "dist/es2019/index.js",
+  "types": "dist/types/index.d.ts",
+  "sideEffects": false,
+  "atlaskit:src": "src/index.ts",
+  "atlassian": {
+    "team": "Editor",
+    "deprecatedAutoEntryPoints": true,
+    "inPublicMirror": true,
+    "releaseModel": "scheduled",
+    "website": {
+      "name": "Editor Markdown Transformer"
+    }
+  },
+  "dependencies": {
+    "@atlaskit/adf-schema": "^24.0.0",
+    "@atlaskit/editor-common": "^70.2.0",
+    "@babel/runtime": "^7.0.0",
+    "markdown-it": "^12.3.2",
+    "markdown-it-table": "^2.0.4",
+    "prosemirror-markdown": "^1.4.2",
+    "prosemirror-model": "1.14.3"
+  },
+  "devDependencies": {
+    "@atlaskit/docs": "*",
+    "@atlaskit/editor-core": "^175.0.0",
+    "@atlaskit/editor-test-helpers": "^17.2.0",
+    "@atlaskit/util-data-test": "^17.6.0",
+    "@atlassian/atlassian-frontend-prettier-config-1.0.1": "npm:@atlassian/atlassian-frontend-prettier-config@1.0.1",
+    "@emotion/react": "^11.7.1",
+    "react": "^16.8.0",
+    "typescript": "4.5.5"
+  },
+  "prettier": "@atlassian/atlassian-frontend-prettier-config-1.0.1"
+}

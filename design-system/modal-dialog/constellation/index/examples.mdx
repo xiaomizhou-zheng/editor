@@ -1,0 +1,145 @@
+---
+order: 0
+---
+
+import ModalDefault from '../../examples/constellation/modal-default';
+import ModalWarning from '../../examples/constellation/modal-warning';
+import ModalDanger from '../../examples/constellation/modal-danger';
+import ModalWidth from '../../examples/constellation/modal-width';
+import ModalScroll from '../../examples/constellation/modal-scroll';
+import FocusSpecificElement from '../../examples/constellation/focus-specific-element';
+import ModalWrapper from '../../examples/constellation/modal-wrapper';
+import ModalCustom from '../../examples/constellation/modal-custom';
+import ModalHeader from '../../examples/constellation/modal-header-default';
+import ModalCustomHeader from '../../examples/constellation/modal-header-custom';
+import ModalFooter from '../../examples/constellation/modal-footer-default';
+import ModalCustomFooter from '../../examples/constellation/modal-footer-custom';
+
+## Default
+
+The default form of a modal dialog.
+
+<Example Component={ModalDefault} packageName="@atlaskit/modal-dialog" />
+
+## Appearance
+
+A modal dialog is available in two other variations.
+The appearance needs to be set on both the modal title and the primary button.
+
+### Warning
+
+Warning modals appear in anticipation of a significant change.
+Have empathy for people.
+Inform,
+but don't alarm.
+If the warning comes before an action,
+clearly communicate what will happen if they proceed,
+and provide an alternative or opt-out where possible.
+
+<a href="/content/writing-guidelines/writing-a-warning-message/">Learn more about writing warning messages</a>
+
+<Example Component={ModalWarning} packageName="@atlaskit/modal-dialog" />
+
+### Danger
+
+Danger modals are used to inform people when something potentially destructive will happen if they continue.
+Explain the problem and provide a next step or an alternative.
+
+<Example Component={ModalDanger} packageName="@atlaskit/modal-dialog" />
+
+## Width
+
+The width of the modal can be specified in different ways:
+
+- The recommended way to specify modal width is using named size options.
+- If a number is provided, the width is set to that number in pixels.
+- If a string including pixels or a percentage is provided, the width will be directly applied as a style.
+
+<Example Component={ModalWidth} packageName="@atlaskit/modal-dialog" />
+
+## Focus management
+
+Focus is moved to the first interactive element inside the modal dialog when rendered.
+Pass the `autoFocus` prop an element `ref` to focus on a specific element.
+
+<Example Component={FocusSpecificElement} packageName="@atlaskit/modal-dialog" />
+
+## Scrolling behavior
+
+Modal dialogs differ in width,
+whereas height is determined by the content.
+Once it reaches a certain threshold,
+the body content will scroll while the header and footer remain fixed until the bottom of the modal dialog is reached.
+
+The scroll behavior of modals can be configured so that scrolling happens inside the modal body or outside the modal,
+within the viewport.
+
+In either case,
+modals prevent the window from being scrolled both natively and programatically.
+This will prevent browser issues such as `scrollIntoView` scrolling the window instead of only the closest scroll parent.
+
+<Example Component={ModalScroll} packageName="@atlaskit/modal-dialog" />
+
+## Form
+
+These internal components can be wrapped in a `form` element to support
+having buttons of type `submit` in the footer.
+
+<Example
+  Component={ModalWrapper}
+  packageName="@atlaskit/modal-dialog"
+/>
+
+## Custom modal
+
+If you wish to customise a modal dialog, it accepts any valid React element
+as children. In this example, we recreate an onboarding modal without
+modal header, title, body, or footer.
+
+<Example
+  Component={ModalCustom}
+  packageName="@atlaskit/modal-dialog"
+/>
+
+## Modal header
+
+Modal header accepts any valid React element as children, so you can
+use modal title in conjunction with other elements like an exit button
+in the top right.
+
+<Example
+  Component={ModalHeader}
+  packageName="@atlaskit/modal-dialog"
+/>
+
+
+### Custom modal header
+
+For very custom use cases, you can achieve the same thing without modal
+header or title. To make sure the modal is accessible, call `useModal`
+and set `titleId` as the `id` on the heading.
+
+<Example
+  Component={ModalCustomHeader}
+  packageName="@atlaskit/modal-dialog"
+/>
+
+## Modal footer
+
+Modal footer accepts any valid React element as children. For example,
+you can add an [avatar](/components/avatar/) in the footer.
+
+<Example
+  Component={ModalFooter}
+  packageName="@atlaskit/modal-dialog"
+/>
+
+### Custom modal footer
+
+For very custom use cases, you can achieve the same thing without modal
+footer.
+
+<Example
+  Component={ModalCustomFooter}
+  packageName="@atlaskit/modal-dialog"
+/>

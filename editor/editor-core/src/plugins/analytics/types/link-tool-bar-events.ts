@@ -1,0 +1,15 @@
+export type {
+  RecentActivitiesPerfAEP,
+  QuickSearchPerfAEP,
+  ViewedCreateLinkInlineDialogAEP,
+  DismissedCreateLinkInlineDialogAEP,
+  EnteredTextLinkSearchInputAEP,
+  ShownPreQuerySearchResultsAEP,
+  ShownPostQuerySearchResultsAEP,
+  HighlightedSearchResultsAEP,
+  SelectedSearchResultsAEP,
+  EditLinkToolbarAEP,
+  UnlinkToolbarAEP,
+  CreateLinkInlineDialogEventPayload,
+  CreateLinkInlineDialogActionType,
+} from '@atlaskit/editor-common/analytics';

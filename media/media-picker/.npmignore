@@ -1,0 +1,8 @@
+build/
+docs/
+examples-helpers/
+examples/
+pages/
+playbooks/
+src/
+tsconfig.json

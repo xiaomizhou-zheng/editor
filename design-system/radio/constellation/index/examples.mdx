@@ -1,0 +1,34 @@
+---
+order: 0
+---
+
+import RadioDefault from '../../examples/constellation/radio-default';
+import RadioInTable from '../../examples/constellation/radio-in-table';
+import RadioRequired from '../../examples/constellation/radio-required';
+import RadioInvalid from '../../examples/constellation/radio-invalid';
+
+## Default
+
+The default way to present a single option from a list.
+
+In most situations where you want to present a list of mutually exclusive options, you will want to use a [radio group](/components/radio/radio-group/examples).
+
+<Example Component={RadioDefault} packageName="@atlaskit/radio" />
+
+## Complex radio usage
+
+There may be some situations where you are unable to directly stack the radio inputs vertically. In those situations, using individual `Radio` components rather than a `RadioGroup` may be more suited to your needs.
+
+<Example Component={RadioInTable} packageName="@atlaskit/radio" />
+
+## Invalid radio
+
+There may be some situations where the selected field is invalid or incorrect.
+
+<Example Component={RadioInvalid} packageName="@atlaskit/radio" />
+
+## Required radio
+
+There may be some situations where an input field must be filled out before submitting the form.
+
+<Example Component={RadioRequired} packageName="@atlaskit/radio" />
